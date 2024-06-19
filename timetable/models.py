@@ -16,3 +16,9 @@ class Course(models.Model):
     def __str__(self):
         return f"{self.major}, {self.year}학년, {self.course_name}"
     
+class Major(models.Model):
+    id = models.AutoField(primary_key=True)
+    major_name = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return f"{self.major_name}"
